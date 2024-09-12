@@ -28,6 +28,7 @@ export default async function Page() {
           return (
             <TodoCard
               key={todo._id}
+              id={todo._id}
               title={todo.title}
               content={todo.content}
             />
