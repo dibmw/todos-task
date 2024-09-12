@@ -17,7 +17,6 @@ export const TodoCreate = () => {
       },
       body: JSON.stringify([{ title, content }]),
     });
-
     router.refresh();
   }
 

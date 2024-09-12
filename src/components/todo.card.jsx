@@ -4,7 +4,7 @@ import { useRouter } from "next/navigation";
 import React from "react";
 
 export const TodoCard = ({ id, title, content }) => {
-  const router = useRouter;
+  const router = useRouter();
 
   async function HandleDeleteTodo() {
     await fetch("https://v1.appbackend.io/v1/rows/Ugj56pBtdy0J", {
@@ -14,7 +14,6 @@ export const TodoCard = ({ id, title, content }) => {
       },
       body: JSON.stringify([id]),
     });
-
     router.refresh();
   }
 
