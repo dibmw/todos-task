@@ -18,10 +18,12 @@ export default async function Page() {
   const { data } = await getTodos();
 
   return (
-    <div>
-      <h1>Hello, Simple CRD Task!</h1>
-      <TodoCreate />
-      <div>
+    <>
+      <div className="flex flex-col items-center">
+        <h1 className="text-5xl m-4 font-extrabold">Hello, Simple CRD Task!</h1>
+        <TodoCreate />
+      </div>
+      <div className="grid grid-cols-4 gap-4 justify-items-center">
         {data.map((todo) => {
           return (
             <TodoCard
@@ -32,6 +34,6 @@ export default async function Page() {
           );
         })}
       </div>
-    </div>
+    </>
   );
 }
