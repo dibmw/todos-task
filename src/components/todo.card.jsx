@@ -18,7 +18,7 @@ export const TodoCard = ({ id, title, content }) => {
   }
 
   return (
-    <div className="p-2 border-2 w-[300px] h-fit text-center rounded-xl transition hover:bg-slate-200">
+    <div className="p-2 border-2 w-[250px] xl:w-[300px] h-fit text-center rounded-xl transition hover:bg-slate-200">
       <h3 className="font-bold">{title}</h3>
       <p>{content}</p>
       <button

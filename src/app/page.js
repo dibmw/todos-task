@@ -19,11 +19,11 @@ export default async function Page() {
 
   return (
     <>
-      <div className="flex flex-col items-center">
+      <div className="flex flex-col items-center text-center">
         <h1 className="text-5xl m-4 font-extrabold">Hello, Simple CRD Task!</h1>
         <TodoCreate />
       </div>
-      <div className="grid grid-cols-4 gap-4 justify-items-center">
+      <div className="grid gap-4 justify-items-center md:grid-cols-2 lg:grid-cols-4">
         {data?.map((todo) => {
           return (
             <TodoCard
