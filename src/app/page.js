@@ -23,7 +23,7 @@ export default async function Page() {
         <h1 className="text-5xl m-4 font-extrabold">Hello, Simple CRD Task!</h1>
         <TodoCreate />
       </div>
-      <div className="grid gap-4 justify-items-center md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid justify-items-center grid-cols-1 gap-y-4 gap-x-2  sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-4">
         {data?.map((todo) => {
           return (
             <TodoCard
