@@ -3,7 +3,9 @@ import { TodoCreate } from "@/components/todo.create";
 
 async function getTodos() {
   try {
-    const res = await fetch("https://v1.appbackend.io/v1/rows/Ugj56pBtdy0J");
+    const res = await fetch("https://v1.appbackend.io/v1/rows/Ugj56pBtdy0J", {
+      cache: "no-store",
+    });
     const data = await res.json();
     return data;
   } catch (error) {
@@ -22,7 +24,7 @@ export default async function Page() {
         <TodoCreate />
       </div>
       <div className="grid grid-cols-4 gap-4 justify-items-center">
-        {data.map((todo) => {
+        {data?.map((todo) => {
           return (
             <TodoCard
               key={todo._id}
